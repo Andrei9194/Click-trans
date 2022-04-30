@@ -1,0 +1,23 @@
+.success-container{
+    width: 300px;
+    height: 200px;
+    background-color: rgb(35, 142, 35);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+.success-title,
+.success-text{
+    color: aliceblue;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+}
+.success-title{
+    margin-top: 15%;
+}
+
+.hidden{
+    display: none;
+}

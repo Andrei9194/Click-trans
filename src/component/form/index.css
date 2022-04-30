@@ -1,0 +1,86 @@
+.title{
+    text-align: center;
+    font: 15px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: bold;
+}
+.form-content {
+	margin:10px auto;
+	max-width: 400px;
+	padding: 0px 12px 10px 20px;
+	font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-areas{
+	padding: 0;
+	display: block;
+	margin: 10px 0 0 0;
+}
+.form-label{
+    margin:0 0 3px 0;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+
+input[type=text], 
+textarea, 
+select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+input[type=text]:focus, 
+textarea:focus, 
+select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+
+.form-input{
+	width: 100%;
+}
+.form-input_radioArea{
+    display: flex;
+    margin-top: 2%;
+}
+
+.form-input_radio{
+    display: flex;
+    flex-direction: row;
+}
+.field-select{
+	width: 100%;
+}
+.field-textarea{
+	height: 100px;
+}
+input[type=submit]{
+	background: #4B99AD;
+	padding: 8px 15px 8px 15px;
+	border: none;
+	color: #fff;
+}
+input[type=submit]:hover{
+	background: #4691A4;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+
+.required{
+	color:red;
+	margin-top: 0;
+	font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.hidden{
+	display: none;
+}
