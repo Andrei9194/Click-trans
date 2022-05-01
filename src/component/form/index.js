@@ -67,7 +67,7 @@ export const Form = () =>{
                     vat: '',
                     confirms: ''
             })
-            // setShowForm(!showForm)
+            setShowForm(!showForm)
             })
             .catch(err =>console.log(err)) 
         }
@@ -135,7 +135,7 @@ export const Form = () =>{
                         <input type="text" name="priceBrutto" id='priceBrutto' className="form-input" value={bruttoValue} readOnly={true}/>
                     </div>
                     <div className='form-areas'>
-                        <input type="submit" value="Submit" onClick={handleSubmit} readOnly={!click} />
+                        <input type="submit" value="Submit" onClick={handleSubmit}/>
                     </div>
                 </div>
             </form>

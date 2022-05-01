@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+How app should be installed:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Cloning the React App
+   by using command git clone:
+   git clone ‘the code URL of the github repo’
 
-## Available Scripts
+2. Configuring your Cloned App
+   npm install
 
-In the project directory, you can run:
+3. Starting the React app
+   run npm start on terminal.
 
-### `npm start`
+How it works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Initialized the state by calling useState with two values current value and the function that is used to update.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Created constant formData and setFormData with initial state an object with names: description, vat, confirms, priceNetto – have an empty value.
 
-### `npm test`
+Added attributes name and value equal formData.name to each input field to control the input value
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Created the function handleChange for updating state formData. Added event handler onChange with function handleChange to each input filed
 
-### `npm run build`
+For the validation form, initialize a new state click and setClick with the initial state true. The added paragraph under each input with a conditional statement. These paragraphs will be shown when we try to send the form but our field has an incorrect value. Also for input priceNetto created a constant with value regular expression
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The value of the input with the label Price Brutto EUR is calculated using the value from “Price netto EUR” text input and value from vat selector. At this field, added attribute readonly with value true. Initialize new state bruttoValue and function setBruttoValue with empty initial state. Function setBruttoValue with counting added to useEffect. UseEffect will be rerender when value priceNetto or vat changed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Created the function sendRequest, with three parameters method URL and body equal null, for form sends via Ajax to rest API. At this function created a new promise and at this promise created a new object XMLHTTPRequest. We indicate that we want to receive data in json format. Created function onload which processes data and error responses from API. And created function send with parameter body.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For hid form and show success box after submitting, initialize new state showModal and set ShowModal with initial state true. And created a component Success Modal with text about success response.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For sending our form to an API created function handleSubmit where we add preventDefault used for don’t refresh the page after submitting, also added contional statetment if input value incorrect, state click will be changed from true on false and showed paragraf with message about error, else form is vallid, form will be send to a rest api by function sendRequest with paramatres method post, URL rest api and body is formData object. If will be success status value of formData will be reset , click changed from false on true, showModal changed from true on false and form be hedden and showed Success Modal.
